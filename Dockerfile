@@ -2,11 +2,11 @@ FROM ubuntu
 
 RUN apt-get update && \
     apt-get install -y python3 && \
-    apt-get install -y pip && \
+    apt-get install -y pip3 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install flask
+RUN pip3 install flask
 
 COPY app.py /app.py
 
