@@ -1,12 +1,10 @@
-FROM ubuntu
+FROM python3.12
 
-RUN apt-get update && \
-    apt-get install -y python3 && \
-    apt-get install -y pip3 && \
+RUN apt-get update && 
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install flask
+RUN pip install flask
 
 COPY app.py /app.py
 
